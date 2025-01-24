@@ -1407,8 +1407,9 @@ def find_ideal_pos(A, B, Ua, scale, img_110=False):
                 ideal_positions.append(ap_center)
                 Neighbor_positions.append(Neighbor) #Save neighbors for plotting 
         return ideal_positions, Neighbor_positions
+    global Uc
     for atom in A:
-        Neighbor = find_neighboring_atoms(atom,B,Ua / scale * 0.5)
+        Neighbor = find_neighboring_atoms(atom,B,Uc / scale * 0.5)
         if len(Neighbor) == 2:
             ap_center = ((Neighbor[0][0]+Neighbor[1][0])/2,(Neighbor[0][1]+Neighbor[1][1])/2)
             ideal_positions.append(ap_center)
