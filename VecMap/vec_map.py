@@ -659,7 +659,7 @@ class Ui_VecMap(QtWidgets.QMainWindow):
                 sublattice_O = find_atom(image_without_AB, O_positions, 'O sites', atom_color='g')
                 ap_O = sublattice_O.atom_positions #Refined atoms positions for O. NumPy array.
                 print('Refining O atoms done!')
-                with open(my_path + title + '-B_positions_refined.csv','w') as O_positions_data:
+                with open(my_path + title + '-O_positions_refined.csv','w') as O_positions_data:
                     O_positions_data.write('Refined positions for O\n')
                     O_positions_data.write('x (px), y (px)\n')
                     for data in ap_O.tolist():
